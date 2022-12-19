@@ -346,12 +346,12 @@
             </BaseButton>
 
             <div class="text-xs hidden sm:block mt-2">
-              <span class="opacity-75">Created by</span>
+              <span class="opacity-75">Powered By</span>
               <a
-                href="https://twitter.com/Idered"
+                href="https://www.techypranav.eu.org/"
                 class="hover:text-white transition outline-none font-medium focus:text-white"
               >
-                Kasper Mikiewicz
+                PRANAV K DILEEP
               </a>
             </div>
           </div>
