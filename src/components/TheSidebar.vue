@@ -104,7 +104,8 @@
                   <img
                     :src="store.picture"
                     alt=""
-                    class="w-14 h-14 border border-slate-700 bg-slate-700/30 rounded-full"
+                    class="w-14 h-14 border
+                    rounded-full"
                   />
                 </div>
                 <label
