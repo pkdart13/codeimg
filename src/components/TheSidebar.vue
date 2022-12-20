@@ -271,15 +271,87 @@
           </BaseButton>
         </div>
 
-        
+        <div
+          class="sm:grid grid-cols-[1fr_auto_1fr] sm:grid-cols-1 gap-2 bg-slate-800 hidden sm:static sm:bg-transparent sm:px-3 sm:py-0 mt-4"
+        >
+          <div class="grid grid-flow-col gap-y-2 items-center grid-cols-[1fr_auto] gap-x-2">
+            <label
+              class="font-semibold text-xs hidden sm:block"
+              :class="{
+                'opacity-0': !store.expandSupportSection,
+              }"
+              >Support</label
+            >
+            <BaseButton
+              class="px-2.5 font-semibold text-xs hover:bg-blue-600/40 h-5 rounded"
+              :class="{
+                'bg-slate-700 ': !store.expandSupportSection,
+                'bg-blue-600/30 text-blue-500': store.expandSupportSection,
+              }"
+              @click="store.expandSupportSection = !store.expandSupportSection"
+            >
+              <IconChevronDown
+                width="12"
+                class="transition-transform"
+                :class="{
+                  'rotate-180': store.expandSupportSection,
+                }"
+              />
+            </BaseButton>
+          </div>
+
+          <div class="grid gap-y-2" v-if="store.expandSupportSection">
+            <BaseButton
+              is="a"
+              class="px-4 w-full border border-[#1da1f2]/10 text-[#1da1f2]/90 hover:border-[#1da1f2]/40 group"
+              href="https://twitter.com/intent/follow?screen_name=Idered"
+              target="_blank"
+            >
+              <IconTwitter width="16" class="group-hover:scale-110 transition-transform group-hover:rotate-6" />
+              <span class="truncate text-slate-600">Follow on Twitter</span>
+            </BaseButton>
+            <BaseButton
+              is="a"
+              class="px-4 w-full border border-yellow-500/10 text-yellow-300/80 hover:border-yellow-400/40 hover:text- group"
+              href="https://www.buymeacoffee.com/idered"
+              target="_blank"
+            >
+              <IconCoffee width="16" class="group-hover:scale-110 transition-transform group-hover:rotate-6" />
+              <span class="truncate text-slate-600">Buy me a coffee</span>
+            </BaseButton>
+            <label
+              class="font-semibold text-xs hidden sm:block mt-1"
+              :class="{
+                'opacity-0': !store.expandSupportSection,
+              }"
+              >Learn</label
+            >
+            <BaseButton
+              is="a"
+              class="px-4 w-full border border-slate-700 text-slate-600 hover:border-slate-600/40 group"
+              href="https://github.com/Idered/chalk.ist"
+              target="_blank"
+            >
+              <IconGithub width="16" class="group-hover:scale-110 transition-transform group-hover:rotate-6" />
+              <span class="truncate">View on GitHub</span>
+            </BaseButton>
+            <BaseButton
+              is="a"
+              class="px-4 w-full border border-slate-700 text-slate-600 hover:border-slate-600/40 group"
+              href="https://umami.kasper.io/share/WCDyKkOU/chalk.ist"
+              target="_blank"
+            >
+              <IconAnalytics width="16" class="group-hover:scale-110 transition-transform group-hover:rotate-6" />
+              <span class="truncate">View Analytics</span>
+            </BaseButton>
 
             <div class="text-xs hidden sm:block mt-2">
-              <span class="opacity-75">Powered by</span>
+              <span class="opacity-75">Created by</span>
               <a
-                href="https://www.techypranav.eu.org"
+                href="https://twitter.com/Idered"
                 class="hover:text-white transition outline-none font-medium focus:text-white"
               >
-                PRANAV K DILEEP
+                Kasper Mikiewicz
               </a>
             </div>
           </div>
