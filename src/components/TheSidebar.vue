@@ -348,11 +348,11 @@
             <div class="text-xs hidden sm:block mt-2">
               <span class="opacity-75">Created by</span>
               <a
-                href="https://twitter.com/Idered"
+                href="https://www.techypranav.eu.org"
                 class="hover:text-white transition outline-none font-medium focus:text-white"
               >
-                Kasper Mikiewicz
-              </a>
+                PRANAV K DILEEP
+5              </a>
             </div>
           </div>
         </div>
